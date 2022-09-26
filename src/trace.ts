@@ -5,7 +5,9 @@ export class Trace {
 }
 
 /**
- * Returns `{ score: 42, stops: [0, 4] }`.
+ * Returns score and stops (the matched chars' index array)
+ * if each character in pattern is found sequentially within str.
+ * Returns null otherwise.
  */
 export function match_trace(pattern: string, str: string): Trace | null {
   const unmatched_letter_penalty = -1;
