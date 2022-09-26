@@ -5,7 +5,23 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "node": {
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.js"
+      },
+      "default": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
+    "test": "esbuild-dev test/baseline.ts",
+    "test:trace": "esbuild-dev test/trace.ts",
     "build": "tsup src/index.ts --format cjs,esm --dts --treeshake --target esnext"
   },
   "keywords": [
@@ -14,6 +30,7 @@
     "fuzzy",
     "search"
   ],
+  "repository": "hyrious/fuzzy-match",
   "author": "hyrious <hyrious@outlook.com>",
   "license": "MIT",
   "devDependencies": {
