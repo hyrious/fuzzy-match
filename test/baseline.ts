@@ -1,7 +1,7 @@
 import * as assert from "assert/strict";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import { get } from "https";
-import { match } from "./index";
+import { match } from "../src/match";
 
 let lines: string[];
 let expected: string[];
@@ -16,7 +16,7 @@ async function fetch(url: string): Promise<string> {
   mkdirSync(cache_dir, { recursive: true });
   const text = await new Promise<string>((resolve) => {
     get(url, async (r) => {
-      const cs = [];
+      const cs: Buffer[] = [];
       for await (const c of r) cs.push(c);
       resolve(Buffer.concat(cs).toString());
     });

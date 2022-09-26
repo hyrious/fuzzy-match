@@ -1,7 +1,10 @@
 {
   "words": [
     "alnum",
+    "esbuild",
     "hyrious",
-    "tajmone"
+    "tajmone",
+    "treeshake",
+    "tsup"
   ]
 }

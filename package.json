@@ -1,15 +1,26 @@
 {
-  "name": "fuzzy-match",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@hyrious/fuzzy-match",
+  "version": "0.1.0",
+  "description": "Match string like Sublime Text",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup src/index.ts --format cjs,esm --dts --treeshake --target esnext"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "string",
+    "match",
+    "fuzzy",
+    "search"
+  ],
+  "author": "hyrious <hyrious@outlook.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^18.7.21"
+    "@hyrious/esbuild-dev": "^0.8.4",
+    "@types/node": "^18.7.21",
+    "esbuild": "^0.15.9",
+    "tsup": "^6.2.3",
+    "typescript": "^4.8.3"
   }
 }
