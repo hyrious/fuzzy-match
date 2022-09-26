@@ -1,0 +1,14 @@
+{
+  "include": ["src"],
+  "compilerOptions": {
+    "strict": true,
+    "noEmit": true,
+    "stripInternal": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["esnext", "dom"],
+    "moduleResolution": "node"
+  }
+}
