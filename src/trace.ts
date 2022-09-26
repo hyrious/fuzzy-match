@@ -38,6 +38,9 @@ export function match_trace(pattern: string, str: string): Trace | null {
     true,
     trace
   );
+  if (score === i_min) {
+    return null;
+  }
 
   return new Trace(score, trace);
 }
